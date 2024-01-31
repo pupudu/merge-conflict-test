@@ -2,4 +2,5 @@
 *.two.js -merge -text
 *.three.js binary
 *.four.js merge=ours -text
+*.five.js linguist-generated=true
 
