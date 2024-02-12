@@ -1,6 +1,5 @@
 *.one.js -merge -diff -text
 *.two.js -merge -text
-*.three.js binary
+*.three.js binary merge=my-custom-driver
 *.four.js merge=ours -text
 *.five.js linguist-generated=true
-
