@@ -12,7 +12,7 @@ const base = $.env.O;
 const master = $.env.A;
 const branch = $.env.B;
 
-const baseChange = $`cat ${base}`;
+const baseChange = await $`cat ${base}`;
 console.log(baseChange);
 
 // console.log("Changes in common parent", $.env);
