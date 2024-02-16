@@ -1,4 +1,2 @@
-const a = 1;
-const b = 2;
-const c = 3;
-const f = 6;
+# This is the merge result 
+ .merge_file_d0ffns
