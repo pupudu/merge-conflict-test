@@ -8,12 +8,11 @@ MERGE TOOL RUNNING
 ##################
 `);
 
-const base = $.env.O;
-const master = $.env.A;
-const branch = $.env.B;
+const base = await $`cat ${$.env.O}`;
+const master = await $`cat ${$.env.A}`;
+const branch = await $`cat ${$.env.B}`;
 
-const baseChange = await $`cat ${base}`;
-console.log(baseChange);
+console.log({base, master, branch});
 
 // console.log("Changes in common parent", $.env);
 //
