@@ -8,7 +8,14 @@ MERGE TOOL RUNNING
 ##################
 `);
 
-console.log("Changes in common parent", $.env);
+const base = $.env.O;
+const master = $.env.A;
+const branch = $.env.B;
+
+const baseChange = $`cat ${base}`;
+console.log(baseChange);
+
+// console.log("Changes in common parent", $.env);
 //
 // echo "Changes in base branch: $1"
 // echo "---------"
