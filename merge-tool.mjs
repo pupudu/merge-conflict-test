@@ -8,11 +8,25 @@ MERGE TOOL RUNNING
 ##################
 `);
 
-const base = await $`cat ${$.env.O}`;
-const master = await $`cat ${$.env.A}`;
-const branch = await $`cat ${$.env.B}`;
+let base = await fs.readFile($.env.O, 'utf8')
+let master = await fs.readFile($.env.A, 'utf8')
+let branch = await fs.readFile($.env.B, 'utf8')
 
-console.log({base, master, branch});
+console.log('#####################');
+console.log(`Changes in base commit:\n`, base);
+
+
+console.log('%%%%%%%%%%%%%%%%%%%%%');
+console.log(`New change in master:\n`, master);
+
+
+console.log('&&&&&&&&&&&&&&&&&&&&&');
+console.log(`New change in demo branch:\n`, branch);
+
+await fs.writeFile($.env.A, `
+// Merged using custom merge driver
+${branch}
+`);
 
 // console.log("Changes in common parent", $.env);
 //
